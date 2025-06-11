@@ -1,0 +1,154 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f7fb;
+  color: #333;
+}
+
+/* Sidebar Layout */
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 240px;
+  background: #003366;
+  color: #fff;
+  padding: 20px;
+  position: fixed;
+  height: 100%;
+}
+
+.sidebar h2 {
+  font-size: 22px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.sidebar nav ul {
+  list-style: none;
+}
+
+.sidebar nav ul li {
+  margin: 10px 0;
+}
+
+.sidebar nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  transition: background 0.2s;
+}
+
+.sidebar nav ul li.active a,
+.sidebar nav ul li a:hover {
+  background-color: #0059b3;
+}
+
+.main-content {
+  margin-left: 240px;
+  padding: 20px;
+  flex: 1;
+}
+
+.top-bar {
+  margin-bottom: 20px;
+}
+
+.top-bar h1 {
+  font-size: 24px;
+}
+
+/* Forms */
+form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  max-width: 500px;
+}
+
+form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+form button {
+  background-color: #003366;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0059b3;
+}
+
+/* Logout Page */
+.logout-page {
+  background: #eef4f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.logout-box {
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.logout-box .btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #003366;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.logout-box .btn:hover {
+  background: #0059b3;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .main-content {
+    margin-left: 0;
+  }
+}

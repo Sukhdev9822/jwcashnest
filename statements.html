@@ -1,0 +1,83 @@
+<!-- statements.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Statements - JWcashnest BANK</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <h2>JWcashnest</h2>
+      <nav>
+        <ul>
+          <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="account.html"><i class="fas fa-wallet"></i> Account</a></li>
+          <li class="active"><a href="statements.html"><i class="fas fa-file-alt"></i> Statements</a></li>
+          <li><a href="transfer.html"><i class="fas fa-exchange-alt"></i> Transfer</a></li>
+          <li><a href="beneficiaries.html"><i class="fas fa-users"></i> Beneficiaries</a></li>
+          <li><a href="bills.html"><i class="fas fa-file-invoice"></i> Bills</a></li>
+          <li><a href="loans.html"><i class="fas fa-hand-holding-usd"></i> Loans</a></li>
+          <li><a href="support.html"><i class="fas fa-headset"></i> Support</a></li>
+          <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+          <li><a href="logout.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="top-bar">
+        <h1>Monthly Statements</h1>
+      </header>
+
+      <section class="statement-summary">
+        <h2>Monthly Summary (2017–2025)</h2>
+        <table>
+          <thead>
+            <tr><th>Year</th><th>Month</th><th>Spent</th></tr>
+          </thead>
+          <tbody>
+            <!-- Generate entries for each month from 2017–2025 -->
+            <!-- Example Rows -->
+            <tr><td>2025</td><td>June</td><td>₹ 40,000</td></tr>
+            <tr><td>2025</td><td>May</td><td>₹ 40,000</td></tr>
+            <tr><td>2024</td><td>December</td><td>₹ 40,000</td></tr>
+            <tr><td>2024</td><td>November</td><td>₹ 40,000</td></tr>
+            <tr><td>2023</td><td>March</td><td>₹ 40,000</td></tr>
+            <tr><td>2022</td><td>July</td><td>₹ 40,000</td></tr>
+            <!-- Add more as needed -->
+          </tbody>
+        </table>
+      </section>
+
+      <section class="daily-transactions">
+        <h2>Daily Transactions - June 2025</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Txn ID</th>
+              <th>Description</th>
+              <th>Credit</th>
+              <th>Debit</th>
+              <th>Balance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Fake transaction examples -->
+            <tr><td>11-Jun-2025</td><td>TXN9582312</td><td>Mobile Bill Payment</td><td>-</td><td>₹1,200</td><td>₹2,01,800</td></tr>
+            <tr><td>10-Jun-2025</td><td>TXN9581212</td><td>UPI Transfer to Ravi</td><td>-</td><td>₹5,000</td><td>₹2,03,000</td></tr>
+            <tr><td>09-Jun-2025</td><td>TXN9578652</td><td>Salary Credit</td><td>₹50,000</td><td>-</td><td>₹2,08,000</td></tr>
+            <tr><td>08-Jun-2025</td><td>TXN9562452</td><td>Netflix Subscription</td><td>-</td><td>₹999</td><td>₹1,58,000</td></tr>
+            <tr><td>07-Jun-2025</td><td>TXN9555477</td><td>Amazon Shopping</td><td>-</td><td>₹3,200</td><td>₹1,59,000</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

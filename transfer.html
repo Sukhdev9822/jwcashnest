@@ -1,0 +1,69 @@
+<!-- transfer.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transfer Money - JWcashnest BANK</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <h2>JWcashnest</h2>
+      <nav>
+        <ul>
+          <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="account.html"><i class="fas fa-wallet"></i> Account</a></li>
+          <li><a href="statements.html"><i class="fas fa-file-alt"></i> Statements</a></li>
+          <li class="active"><a href="transfer.html"><i class="fas fa-exchange-alt"></i> Transfer</a></li>
+          <li><a href="beneficiaries.html"><i class="fas fa-users"></i> Beneficiaries</a></li>
+          <li><a href="bills.html"><i class="fas fa-file-invoice"></i> Bills</a></li>
+          <li><a href="loans.html"><i class="fas fa-hand-holding-usd"></i> Loans</a></li>
+          <li><a href="support.html"><i class="fas fa-headset"></i> Support</a></li>
+          <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+          <li><a href="logout.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="top-bar">
+        <h1>Transfer Money</h1>
+      </header>
+
+      <section class="transfer-form">
+        <form>
+          <label for="from-account">From Account</label>
+          <select id="from-account">
+            <option>1000054871245007 - Savings</option>
+            <option>FD4578112398 - Fixed Deposit</option>
+          </select>
+
+          <label for="transfer-type">Transfer Type</label>
+          <select id="transfer-type">
+            <option>Domestic</option>
+            <option>International</option>
+          </select>
+
+          <label for="to-account">To Account Number</label>
+          <input type="text" id="to-account" placeholder="Enter beneficiary account number" required>
+
+          <label for="ifsc">IFSC Code</label>
+          <input type="text" id="ifsc" placeholder="Enter IFSC Code" required>
+
+          <label for="amount">Amount (INR)</label>
+          <input type="number" id="amount" placeholder="Enter amount" required>
+
+          <label for="note">Note</label>
+          <input type="text" id="note" placeholder="Payment note (optional)">
+
+          <button type="submit" onclick="event.preventDefault(); alert('Demo transfer submitted!')">Transfer</button>
+        </form>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

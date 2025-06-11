@@ -1,0 +1,43 @@
+<!-- register.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - JWcashnest BANK</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="register-page">
+  <div class="login-container">
+    <h1>Register Account</h1>
+    <form>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" value="Sukhdev Mondal" required>
+
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" required>
+
+      <label for="aadhaar">Aadhaar Number</label>
+      <input type="text" id="aadhaar" value="671622353722" required>
+
+      <label for="pan">PAN Number</label>
+      <input type="text" id="pan" value="EUKPM1620L" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" value="sukhdevmondal@example.com" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="text" id="phone" value="8420149381" required>
+
+      <label for="aadhaar-img">Upload Aadhaar</label>
+      <input type="file" id="aadhaar-img">
+
+      <label for="pan-img">Upload PAN</label>
+      <input type="file" id="pan-img">
+
+      <button type="submit" onclick="event.preventDefault(); alert('Demo registration submitted!')">Submit</button>
+    </form>
+    <p class="register-link"><a href="index.html">Back to Login</a></p>
+  </div>
+</body>
+</html>

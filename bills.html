@@ -1,0 +1,64 @@
+<!-- bills.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bill Payments - JWcashnest BANK</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <h2>JWcashnest</h2>
+      <nav>
+        <ul>
+          <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="account.html"><i class="fas fa-wallet"></i> Account</a></li>
+          <li><a href="statements.html"><i class="fas fa-file-alt"></i> Statements</a></li>
+          <li><a href="transfer.html"><i class="fas fa-exchange-alt"></i> Transfer</a></li>
+          <li><a href="beneficiaries.html"><i class="fas fa-users"></i> Beneficiaries</a></li>
+          <li class="active"><a href="bills.html"><i class="fas fa-file-invoice"></i> Bills</a></li>
+          <li><a href="loans.html"><i class="fas fa-hand-holding-usd"></i> Loans</a></li>
+          <li><a href="support.html"><i class="fas fa-headset"></i> Support</a></li>
+          <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+          <li><a href="logout.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="top-bar">
+        <h1>Bill Payments</h1>
+      </header>
+
+      <section class="bill-payments">
+        <form>
+          <label for="category">Bill Category</label>
+          <select id="category">
+            <option>Electricity</option>
+            <option>Mobile</option>
+            <option>Internet</option>
+            <option>DTH</option>
+            <option>Water</option>
+            <option>Credit Card</option>
+          </select>
+
+          <label for="biller">Biller Name</label>
+          <input type="text" id="biller" placeholder="e.g. BESCOM, Airtel, Tata Sky" required>
+
+          <label for="consumer-id">Consumer/Account ID</label>
+          <input type="text" id="consumer-id" placeholder="Enter consumer number" required>
+
+          <label for="due-amount">Due Amount (INR)</label>
+          <input type="number" id="due-amount" placeholder="e.g. 1500" required>
+
+          <button type="submit" onclick="event.preventDefault(); alert('Demo bill payment submitted!')">Pay Now</button>
+        </form>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
