@@ -1,27 +1,37 @@
-// Password toggle
-function togglePasswordVisibility(id, iconId) {
-  const input = document.getElementById(id);
-  const icon = document.getElementById(iconId);
-  if (input.type === 'password') {
-    input.type = 'text';
-    icon.classList.remove('fa-eye');
-    icon.classList.add('fa-eye-slash');
-  } else {
-    input.type = 'password';
-    icon.classList.remove('fa-eye-slash');
-    icon.classList.add('fa-eye');
-  }
-}
+document.addEventListener('DOMContentLoaded', () => {
+  const balanceText = document.getElementById('balance-text');
+  const toggleIcon = document.getElementById('toggle-balance');
 
-// Balance toggle
-function toggleBalance(id, btnId) {
-  const balanceEl = document.getElementById(id);
-  const btn = document.getElementById(btnId);
-  if (balanceEl.innerText.includes('*****')) {
-    balanceEl.innerText = '₹ 8,95,74,000.52';
-    btn.innerText = 'Hide Balance';
-  } else {
-    balanceEl.innerText = '*****';
-    btn.innerText = 'Show Balance';
+  let isVisible = false;
+  const realBalance = '₹75,000'; // Change to actual balance or fetch dynamically
+
+  // Toggle balance visibility
+  if (balanceText && toggleIcon) {
+    toggleIcon.addEventListener('click', () => {
+      isVisible = !isVisible;
+
+      if (isVisible) {
+        balanceText.textContent = realBalance;
+        toggleIcon.classList.remove('fa-eye');
+        toggleIcon.classList.add('fa-eye-slash');
+      } else {
+        balanceText.textContent = '₹ *******';
+        toggleIcon.classList.remove('fa-eye-slash');
+        toggleIcon.classList.add('fa-eye');
+      }
+    });
   }
-}
+
+  // (Optional) Mobile sidebar auto close — if you plan to add a mobile toggle
+  const sidebarLinks = document.querySelectorAll('.sidebar nav ul li a');
+  const sidebar = document.querySelector('.sidebar');
+
+  sidebarLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth < 768 && sidebar) {
+        sidebar.style.display = 'none'; // Hide sidebar on small screen
+      }
+    });
+  });
+});
+
