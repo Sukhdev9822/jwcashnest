@@ -1,9 +1,10 @@
+<!-- account.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dashboard - JWcashnest BANK</title>
+  <title>Account Summary - JWcashnest BANK</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
@@ -16,7 +17,7 @@
       <nav>
         <ul>
           <li><a href="home.html"><i class="fa fa-home"></i> Home</a></li>
-          <li><a href="account.html"><i class="fa fa-wallet"></i> Account</a></li>
+          <li class="active"><a href="account.html"><i class="fa fa-wallet"></i> Account</a></li>
           <li><a href="statements.html"><i class="fa fa-file-alt"></i> Statements</a></li>
           <li><a href="transfer.html"><i class="fa fa-exchange-alt"></i> Transfer</a></li>
           <li><a href="beneficiaries.html"><i class="fa fa-users"></i> Beneficiaries</a></li>
@@ -29,35 +30,36 @@
       </nav>
     </div>
 
-    <!-- Main Dashboard -->
+    <!-- Main Content -->
     <div class="main-content">
-      <h1>Welcome, Sukhdev Mondal</h1>
-
+      <h1>Account Summary</h1>
       <div class="card-container">
-        <!-- Account Balance -->
-        <div class="card balance-card">
-          <h2>Account Balance</h2>
-          <p class="balance-amount">
-            <span id="balance-text">₹ *******</span>
-            <i class="fas fa-eye balance-toggle" id="toggle-balance" title="Show/Hide Balance"></i>
+        <div class="card account-details">
+          <h2>Account Holder</h2>
+          <p><strong>Name:</strong> Sukhdev Mondal</p>
+          <p><strong>Account Number:</strong> 1000054871245007</p>
+          <p><strong>Account Type:</strong> Savings</p>
+          <p><strong>Branch:</strong> Europe Main Branch</p>
+        </div>
+
+        <div class="card account-balance">
+          <h2>Balance</h2>
+          <p><span id="account-balance">₹ *******</span>
+            <i class="fas fa-eye balance-toggle" id="toggle-account-balance" title="Show/Hide Balance"></i>
           </p>
         </div>
 
-        <!-- Last Login -->
-        <div class="card info-card">
-          <h2>Last Login</h2>
-          <p>11 June 2025, 10:32 AM</p>
-        </div>
-
-        <!-- Recent Activity -->
-        <div class="card info-card">
-          <h2>Recent Activity</h2>
-          <p>₹40,000 debited - Mobile Payment</p>
+        <div class="card">
+          <h2>IFSC & Other Details</h2>
+          <p><strong>IFSC Code:</strong> JWCN0000012</p>
+          <p><strong>MICR Code:</strong> 700142005</p>
+          <p><strong>Status:</strong> Active</p>
         </div>
       </div>
     </div>
   </div>
 </body>
 </html>
+
 
 
