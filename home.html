@@ -3,57 +3,65 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard - JWcashnest BANK</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <script defer src="script.js"></script>
 </head>
 <body>
   <div class="dashboard-container">
-    <aside class="sidebar">
+    <div class="sidebar">
       <h2>JWcashnest</h2>
       <nav>
         <ul>
-          <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
-          <li><a href="account.html"><i class="fas fa-wallet"></i> Account</a></li>
-          <li><a href="statements.html"><i class="fas fa-file-alt"></i> Statements</a></li>
-          <li><a href="transfer.html"><i class="fas fa-exchange-alt"></i> Transfer</a></li>
-          <li><a href="beneficiaries.html"><i class="fas fa-users"></i> Beneficiaries</a></li>
-          <li><a href="bills.html"><i class="fas fa-file-invoice"></i> Bills</a></li>
-          <li><a href="loans.html"><i class="fas fa-hand-holding-usd"></i> Loans</a></li>
-          <li><a href="support.html"><i class="fas fa-headset"></i> Support</a></li>
-          <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
-          <li><a href="logout.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+          <li class="active"><a href="home.html"><i class="fa fa-home"></i> Home</a></li>
+          <li><a href="account.html"><i class="fa fa-wallet"></i> Account</a></li>
+          <li><a href="statements.html"><i class="fa fa-file-alt"></i> Statements</a></li>
+          <li><a href="transfer.html"><i class="fa fa-exchange-alt"></i> Transfer</a></li>
+          <li><a href="beneficiaries.html"><i class="fa fa-users"></i> Beneficiaries</a></li>
+          <li><a href="bills.html"><i class="fa fa-receipt"></i> Bills</a></li>
+          <li><a href="loans.html"><i class="fa fa-credit-card"></i> Loans</a></li>
+          <li><a href="support.html"><i class="fa fa-headset"></i> Support</a></li>
+          <li><a href="profile.html"><i class="fa fa-user"></i> Profile</a></li>
+          <li><a href="logout.html"><i class="fa fa-sign-out-alt"></i> Logout</a></li>
         </ul>
       </nav>
-    </aside>
-
-    <main class="main-content">
-      <header class="top-bar">
+    </div>
+    <div class="main-content">
+      <div class="top-bar">
         <h1>Welcome, Sukhdev Mondal</h1>
-        <div class="balance-display">
-          <span>Account Balance:</span>
-          <span id="balance-amount">₹ <span id="balance-value">*******</span></span>
-          <i class="fas fa-eye toggle-password" onclick="toggleBalance(this)"></i>
-        </div>
-      </header>
+        <p>Account Balance: <span id="balance-display">₹ ********</span>
+          <button onclick="toggleBalance('balance-display', 'balance-toggle')" id="balance-toggle" class="btn small">Show Balance</button>
+        </p>
+      </div>
 
-      <section class="dashboard-cards">
-        <div class="card">
+      <div class="card-container">
+        <div class="info-card">
           <h3>Total Balance</h3>
-          <p id="balance-card">₹ ********</p>
+          <p>₹ ********</p>
         </div>
-        <div class="card">
+        <div class="info-card">
           <h3>Last Login</h3>
           <p>11 June 2025, 10:32 AM</p>
         </div>
-        <div class="card">
-          <h3>Recent Activity</h3>
-          <p>₹40,000 debited - Mobile Payment</p>
+        <div class="info-card">
+          <h3>Recent Transactions</h3>
+          <ul>
+            <li>₹40,000 debited - Mobile Payment</li>
+            <li>₹15,000 credited - Salary</li>
+            <li>₹5,000 debited - Bill Payment</li>
+            <li>₹2,000 debited - ATM Withdrawal</li>
+          </ul>
         </div>
-      </section>
-    </main>
+        <div class="info-card actions">
+          <h3>Quick Actions</h3>
+          <a href="transfer.html" class="btn">Transfer Money</a>
+          <a href="statements.html" class="btn">View Statements</a>
+          <a href="bills.html" class="btn">Pay Bills</a>
+        </div>
+      </div>
+    </div>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
+
