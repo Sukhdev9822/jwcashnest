@@ -1,19 +1,24 @@
-<!-- home.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dashboard - JWcashnest BANK</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script defer src="script.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  />
 </head>
 <body>
   <div class="dashboard-container">
+    <!-- Sidebar -->
     <div class="sidebar">
       <h2>JWcashnest</h2>
       <nav>
         <ul>
-          <li class="active"><a href="home.html"><i class="fa fa-home"></i> Home</a></li>
+          <li><a href="home.html"><i class="fa fa-home"></i> Home</a></li>
           <li><a href="account.html"><i class="fa fa-wallet"></i> Account</a></li>
           <li><a href="statements.html"><i class="fa fa-file-alt"></i> Statements</a></li>
           <li><a href="transfer.html"><i class="fa fa-exchange-alt"></i> Transfer</a></li>
@@ -26,44 +31,35 @@
         </ul>
       </nav>
     </div>
+
+    <!-- Main Dashboard -->
     <div class="main-content">
-      <div class="top-bar">
-        <h1>Welcome, Sukhdev Mondal</h1>
-        <p>Account Balance: <span id="balance-display">₹ ********</span>
-          <button onclick="toggleBalance('balance-display', 'balance-toggle')" id="balance-toggle" class="btn small">Show Balance</button>
-        </p>
-      </div>
+      <h1>Welcome, Sukhdev Mondal</h1>
 
       <div class="card-container">
-        <div class="info-card">
-          <h3>Total Balance</h3>
-          <p>₹ ********</p>
-<button onclick="toggleBalance('balance-display', 'balance-toggle')" id="balance-toggle" class="btn small">Show Balance</button>
-        </p>
-
+        <!-- Account Balance -->
+        <div class="card balance-card">
+          <h2>Account Balance</h2>
+          <p class="balance-amount">
+            <span id="balance-text">₹ *******</span>
+            <i class="fas fa-eye balance-toggle" id="toggle-balance" title="Show/Hide Balance"></i>
+          </p>
         </div>
-        <div class="info-card">
-          <h3>Last Login</h3>
+
+        <!-- Last Login -->
+        <div class="card info-card">
+          <h2>Last Login</h2>
           <p>11 June 2025, 10:32 AM</p>
         </div>
-        <div class="info-card">
-          <h3>Recent Transactions</h3>
-          <ul>
-            <li>₹40,000 debited - Mobile Payment</li>
-            <li>₹15,000 credited - Salary</li>
-            <li>₹5,000 debited - Bill Payment</li>
-            <li>₹2,000 debited - ATM Withdrawal</li>
-          </ul>
-        </div>
-        <div class="info-card actions">
-          <h3>Quick Actions</h3>
-          <a href="transfer.html" class="btn">Transfer Money</a>
-          <a href="statements.html" class="btn">View Statements</a>
-          <a href="bills.html" class="btn">Pay Bills</a>
+
+        <!-- Recent Activity -->
+        <div class="card info-card">
+          <h2>Recent Activity</h2>
+          <p>₹40,000 debited - Mobile Payment</p>
         </div>
       </div>
     </div>
   </div>
-  <script src="script.js"></script>
 </body>
 </html>
+
