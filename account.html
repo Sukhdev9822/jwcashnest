@@ -1,104 +1,73 @@
-<!-- beneficiaries.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beneficiaries - JWcashnest BANK</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <script defer src="script.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Account - JWcashnest BANK</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
   <div class="dashboard-container">
-    <aside class="sidebar">
+    <!-- Sidebar -->
+    <div class="sidebar">
       <h2>JWcashnest</h2>
       <nav>
         <ul>
-          <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
-          <li><a href="account.html"><i class="fas fa-wallet"></i> Account</a></li>
-          <li><a href="statements.html"><i class="fas fa-file-alt"></i> Statements</a></li>
-          <li><a href="transfer.html"><i class="fas fa-exchange-alt"></i> Transfer</a></li>
-          <li class="active"><a href="beneficiaries.html"><i class="fas fa-users"></i> Beneficiaries</a></li>
-          <li><a href="bills.html"><i class="fas fa-file-invoice"></i> Bills</a></li>
-          <li><a href="loans.html"><i class="fas fa-hand-holding-usd"></i> Loans</a></li>
-          <li><a href="support.html"><i class="fas fa-headset"></i> Support</a></li>
-          <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
-          <li><a href="logout.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+          <li><a href="home.html"><i class="fa fa-home"></i> Home</a></li>
+          <li><a href="account.html" class="active"><i class="fa fa-wallet"></i> Account</a></li>
+          <li><a href="statements.html"><i class="fa fa-file-alt"></i> Statements</a></li>
+          <li><a href="transfer.html"><i class="fa fa-exchange-alt"></i> Transfer</a></li>
+          <li><a href="beneficiaries.html"><i class="fa fa-users"></i> Beneficiaries</a></li>
+          <li><a href="bills.html"><i class="fa fa-receipt"></i> Bills</a></li>
+          <li><a href="loans.html"><i class="fa fa-credit-card"></i> Loans</a></li>
+          <li><a href="support.html"><i class="fa fa-headset"></i> Support</a></li>
+          <li><a href="profile.html"><i class="fa fa-user"></i> Profile</a></li>
+          <li><a href="logout.html"><i class="fa fa-sign-out-alt"></i> Logout</a></li>
         </ul>
       </nav>
-    </aside>
+    </div>
 
-    <main class="main-content">
-      <header class="top-bar">
-        <h1>Saved Beneficiaries</h1>
-      </header>
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="header">
+        <h1>Account Overview</h1>
+        <p>View and manage your primary bank account information.</p>
+      </div>
 
-      <section class="beneficiaries-list">
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Account Number</th>
-              <th>Bank Name</th>
-              <th>IFSC/SWIFT</th>
-              <th>Type</th>
-              <th>Country</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Ravi Sharma</td>
-              <td>542104895632</td>
-              <td>HDFC Bank</td>
-              <td>HDFC0001245</td>
-              <td>Domestic</td>
-              <td>India</td>
-            </tr>
-            <tr>
-              <td>Anjali Das</td>
-              <td>631245879632</td>
-              <td>Axis Bank</td>
-              <td>UTIB0000412</td>
-              <td>Domestic</td>
-              <td>India</td>
-            </tr>
-            <tr>
-              <td>James Anderson</td>
-              <td>GB82WEST12345698765432</td>
-              <td>HSBC UK</td>
-              <td>HBUKGB4B</td>
-              <td>International</td>
-              <td>UK</td>
-            </tr>
-            <tr>
-              <td>Li Wei</td>
-              <td>CN65ICBK000123456789</td>
-              <td>ICBC China</td>
-              <td>ICBKCNBJ</td>
-              <td>International</td>
-              <td>China</td>
-            </tr>
-            <tr>
-              <td>Priya Verma</td>
-              <td>203145963214</td>
-              <td>State Bank of India</td>
-              <td>SBIN0000555</td>
-              <td>Domestic</td>
-              <td>India</td>
-            </tr>
-            <tr>
-              <td>Sophie Martin</td>
-              <td>FR7630006000011234567890189</td>
-              <td>BNP Paribas</td>
-              <td>BNPAFRPP</td>
-              <td>International</td>
-              <td>France</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-    </main>
+      <div class="card-grid">
+        <div class="card">
+          <h3><i class="fa fa-id-card"></i> Account Number</h3>
+          <p>1234 5678 9012 3456</p>
+        </div>
+
+        <div class="card">
+          <h3><i class="fa fa-user-circle"></i> Account Holder</h3>
+          <p>Sukhdev Mondal</p>
+        </div>
+
+        <div class="card">
+          <h3><i class="fa fa-wallet"></i> Account Type</h3>
+          <p>Savings</p>
+        </div>
+
+        <div class="card">
+          <h3><i class="fa fa-money-check-alt"></i> Current Balance</h3>
+          <p>₹75450,000</p>
+        </div>
+
+        <div class="card">
+          <h3><i class="fa fa-calendar-check"></i> Account Opened</h3>
+          <p>21 January 2019</p>
+        </div>
+
+        <div class="card">
+          <h3><i class="fa fa-bank"></i> Branch</h3>
+          <p>Europe Main Branch</p>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
+
