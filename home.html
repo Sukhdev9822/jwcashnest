@@ -64,4 +64,26 @@
   <script src="script.js"></script>
 </body>
 </html>
+<script>
+  let isHidden = true;
+  const balanceElement = document.getElementById("balance");
+  const toggleIcon = document.getElementById("toggleBalance");
+
+  // Set your actual balance here (for example only)
+  const actualBalance = "₹75,000";
+
+  toggleIcon.addEventListener("click", function () {
+    if (isHidden) {
+      balanceElement.textContent = actualBalance;
+      toggleIcon.classList.remove("fa-eye");
+      toggleIcon.classList.add("fa-eye-slash");
+    } else {
+      balanceElement.textContent = "********";
+      toggleIcon.classList.remove("fa-eye-slash");
+      toggleIcon.classList.add("fa-eye");
+    }
+    isHidden = !isHidden;
+  });
+</script>
+
 
